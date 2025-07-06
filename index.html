@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nabila Game & Music Hub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #0f0f0f; color: #fff; }
+    header { text-align: center; background: #111; padding: 30px; box-shadow: 0 2px 6px rgba(0,0,0,0.4); }
+    header h1 { margin: 0; font-size: 2.5rem; color: #0ff; }
+    header p { color: #ccc; }
+    section { max-width: 1000px; margin: auto; padding: 30px; }
+    .music-card, .game-card { background: #1a1a1a; padding: 15px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,255,255,0.1); }
+    .music-card h3, .game-card h3 { margin-bottom: 10px; }
+    iframe, video { width: 100%; border: none; border-radius: 8px; }
+    .game-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .game-card button, .partner-section button { padding: 10px; background: #0ff; color: #000; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    .partner-section form, #topupForm { display: flex; flex-direction: column; gap: 12px; }
+    .partner-section input, .partner-section textarea, #topupForm input, #topupForm select { padding: 10px; border-radius: 6px; border: none; font-size: 1rem; }
+    footer { text-align: center; padding: 20px; background: #111; color: #888; font-size: 0.9rem; margin-top: 40px; }
+    .bg-music-control { position: fixed; top: 10px; right: 10px; background: #0ff; color: #000; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: bold; z-index: 999; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nabila Game & Music Hub 🎮🎵</h1>
+    <p>Main Game + Dengerin Musik + Rilis Lagu Kamu!</p>
+  </header>  <div class="bg-music-control" onclick="toggleMusic()">🔇 Matikan Musik</div>
+  <audio id="bgMusic" loop autoplay>
+    <source src="https://vgchzuqtrmohyzojvngw.supabase.co/storage/v1/object/public/seleniumplatformassets//Drunk%20Confessions%20%20%20%20-%20Lyrik%20-%20Nabila%20Ahmad_HD.mp4" type="audio/mp4">
+  </audio>  <section class="music-section">
+    <h2>🎶 Koleksi Lagu Nabila Ahmad</h2>
+    <!-- 👇 DAFTAR LAGU NABILAH AHMAD DITANAMKAN DI SINI -->
+    <div class="music-card"><h3>Cinta Yg Direlakan</h3><iframe src="https://www.youtube.com/embed/ovtfUmmI7Jw" allowfullscreen></iframe></div>
+    <div class="music-card"><h3>Drunk Confessions</h3><iframe src="https://www.youtube.com/embed/lreJMSzZe9s" allowfullscreen></iframe></div>
+    <div class="music-card"><h3>Sepatu Tua</h3><iframe src="https://www.youtube.com/embed/pEj8HCr-8qo" allowfullscreen></iframe></div>
+    <div class="music-card"><h3>Wanita Penjual Sayur</h3><iframe src="https://www.youtube.com/embed/Uc_cIhb9q44" allowfullscreen></iframe></div>
+    <div class="music-card"><h3>Broken Home Anthem</h3><iframe src="https://www.youtube.com/embed/7MGsLhPD1ms" allowfullscreen></iframe></div>
+    <div class="music-card"><h3>Janda Nakal</h3><iframe src="https://www.youtube.com/embed/kR8Oz7mU8cA" allowfullscreen></iframe></div>
+    <div class="music-card"><h3>Kenangan Dijalan Sepi</h3><iframe src="https://www.youtube.com/embed/z5orh-Aumus" allowfullscreen></iframe></div>
+    <div class="music-card"><h3>Charting The Unknown</h3><iframe src="https://www.youtube.com/embed/gkoV9Etgtz0" allowfullscreen></iframe></div>
+    <div class="music-card"><h3>Suami Manja</h3><iframe src="https://www.youtube.com/embed/Vm65ECYLfzU" allowfullscreen></iframe></div>
+    <div class="music-card"><h3>The Pleasure Of Love</h3><iframe src="https://www.youtube.com/embed/AQMPILL8ukg" allowfullscreen></iframe></div>
+    <div class="music-card"><h3>Secangkir Kopi Dan Sepotong Roti</h3><iframe src="https://www.youtube.com/embed/videoseries?list=OLAK5uy_lFARTDWS5rfEyo5Rbz9NQK1RcCx9B1TKA" allowfullscreen></iframe></div>
+    <div class="music-card"><h3>Last On The Tracks</h3><iframe src="https://www.youtube.com/embed/videoseries?list=OLAK5uy_lHuRVZMuVd3JSjOc9aDfwVWQhKTrY0nwU" allowfullscreen></iframe></div>
+  </section>  <section class="game-section">
+    <h2>🕹️ Game Nostalgia Pilihan</h2>
+    <div class="game-grid">
+      <!-- 👇 GAME VARIASI LEGENDARIS DITANAMKAN DI SINI -->
+      <div class="game-card"><h3>Super Mario Bros</h3><iframe src="https://www.retrogames.cc/embed/20113-super-mario-bros.html"></iframe></div>
+      <div class="game-card"><h3>Captain Commando</h3><iframe src="https://www.retrogames.cc/embed/16336-captain-commando.html"></iframe></div>
+      <div class="game-card"><h3>The Punisher</h3><iframe src="https://www.retrogames.cc/embed/17619-the-punisher.html"></iframe></div>
+      <div class="game-card"><h3>Warriors of Fate</h3><iframe src="https://www.retrogames.cc/embed/16056-warriors-of-fate.html"></iframe></div>
+      <div class="game-card"><h3>Contra</h3><iframe src="https://www.retrogames.cc/embed/20002-contra-usa.html"></iframe></div>
+      <div class="game-card"><h3>Double Dragon II</h3><iframe src="https://www.retrogames.cc/embed/19975-double-dragon-ii-the-revenge-usa.html"></iframe></div>
+      <div class="game-card"><h3>Adventure Island</h3><iframe src="https://www.retrogames.cc/embed/19992-adventure-island-nes.html"></iframe></div>
+      <div class="game-card"><h3>Bomberman</h3><iframe src="https://www.retrogames.cc/embed/20324-bomberman-nes.html"></iframe></div>
+    </div>
+  </section>  <section id="topup">
+    <h2>💰 Top Up Koin</h2>
+    <form id="topupForm">
+      <input type="email" id="email" placeholder="Email kamu" required />
+      <select id="jumlah">
+        <option value="5">5 Koin</option>
+        <option value="10">10 Koin</option>
+        <option value="20">20 Koin</option>
+      </select>
+      <input type="file" id="bukti" accept="image/*" required />
+      <button type="submit">🔘 Kirim Permintaan Topup</button>
+    </form>
+  </section>  <section class="partner-section">
+    <h2>📢 Rilis Lagu Kamu di Platform Ini</h2>
+    <a href="https://wa.me/6285810526151?text=Halo%20Admin%20Nabila,%20saya%20ingin%20rilis%20lagu%20di%20platform%20kamu!"><button>Kirim via WhatsApp</button></a>
+  </section>  <footer>
+    © 2025 Nabila Ahmad Studio. All rights reserved.
+  </footer>  <script type="module">
+    // GANTI DENGAN SUPABASE PROJECT KAMU SENDIRI 👇
+    import { createClient } from "https://esm.sh/@supabase/supabase-js";
+    const supabase = createClient(
+      "https://vgchzuqtrmohyzojvngw.supabase.co", // GANTI JIKA PERLU
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." // GANTI DENGAN ANON KEY KAMU
+    );
+
+    document.getElementById("topupForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const jumlah = parseInt(document.getElementById("jumlah").value);
+      const file = document.getElementById("bukti").files[0];
+      const fileName = `${email}-${Date.now()}.jpg`;
+
+      const { data: uploadData, error: uploadError } = await supabase.storage.from("bukti_topup").upload(fileName, file);
+      if (uploadError) return alert("Upload gagal: " + uploadError.message);
+
+      const bukti_url = `https://vgchzuqtrmohyzojvngw.supabase.co/storage/v1/object/public/bukti_topup/${fileName}`;
+      const { error } = await supabase.from("coin_topup_requests").insert([{ email, jumlah_koin: jumlah, status: "pending", bukti_url }]);
+      if (error) return alert("Gagal simpan data.");
+
+      alert("Permintaan topup berhasil dikirim!");
+      const waMsg = `Halo Admin, saya ingin topup:\nEmail: ${email}\nJumlah: ${jumlah} koin\nBukti: ${bukti_url}`;
+      window.open(`https://wa.me/6285810526151?text=${encodeURIComponent(waMsg)}`);
+    });
+
+    let isPlaying = true;
+    const bgMusic = document.getElementById("bgMusic");
+    function toggleMusic() {
+      if (isPlaying) {
+        bgMusic.pause();
+        document.querySelector('.bg-music-control').innerText = '🔊 Nyalakan Musik';
+      } else {
+        bgMusic.play();
+        document.querySelector('.bg-music-control').innerText = '🔇 Matikan Musik';
+      }
+      isPlaying = !isPlaying;
+    }
+  </script></body>
+</html>
